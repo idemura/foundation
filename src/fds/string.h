@@ -1,11 +1,9 @@
-#ifndef FOUNDATION_STRING_H
-#define FOUNDATION_STRING_H
+#ifndef FDS_STRING_H
+#define FDS_STRING_H
 
 #include "fds/memmgr.h"
 
-/**
- * Dynamically allocated immutable string
- */
+/// Dynamically allocated immutable string
 
 typedef struct {
     size_t len;

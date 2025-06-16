@@ -1,5 +1,5 @@
-#ifndef FOUNDATION_TESTING_H
-#define FOUNDATION_TESTING_H
+#ifndef TEST_TESTING_H
+#define TEST_TESTING_H
 
 #include "port/port.h"
 

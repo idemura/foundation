@@ -1,11 +1,9 @@
-#ifndef FOUNDATION_MEMMGR_H
-#define FOUNDATION_MEMMGR_H
+#ifndef FDS_MEMMGR_H
+#define FDS_MEMMGR_H
 
 #include "port/port.h"
 
-/**
- * Memory manager/allocator.
- */
+/// Memory manager/allocator.
 
 static const size_t FDS_DEFAULT_POOL = 0;
 

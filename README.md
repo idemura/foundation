@@ -1,5 +1,5 @@
 # foundation
-Data structures in C17. Currently:
+Data structures in C23. Currently:
 * AA tree map
 * Robin Hood hash map
 * Vector
