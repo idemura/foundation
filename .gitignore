@@ -1,23 +1,10 @@
+build
 *.o
 *.obj
-*.so
-*.dylib
-*.dll
 *.a
 *.lib
-*.out
+*.so
+*.dll
+*.dylib
 *.exe
-.ninja_deps
-.ninja_log
-
 *_test
-
-# Generated with generate_ninja.py
-src/ninja_build
-
-# Local build script with custom flags
-local_build.sh
-
-# Binaries:
-src/benchmark/benchmark
-src/owl/owl

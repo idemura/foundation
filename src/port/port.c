@@ -1,10 +1,11 @@
-#include "foundation/lang.h"
+#include "port/port.h"
 
 #include <stdio.h>
 
 static_assert(sizeof(long) == 8, "64 bit system required");
 
-noreturn void die(const char *format, ...)
+noreturn
+void die(const char *format, ...)
 {
     fprintf(stderr, "Fatal error: ");
 
@@ -16,9 +17,4 @@ noreturn void die(const char *format, ...)
     fprintf(stderr, "\n");
 
     exit(1);
-}
-
-bool str_starts_with(const char *s, const char *pattern)
-{
-    return memcmp(s, pattern, strlen(pattern)) == 0;
 }

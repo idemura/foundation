@@ -1,5 +1,5 @@
-#ifndef FOUNDATION_LANG_H
-#define FOUNDATION_LANG_H
+#ifndef PORT_PORT_H
+#define PORT_PORT_H
 
 #include <assert.h>
 #include <stdalign.h>
@@ -11,19 +11,12 @@
 #include <stdnoreturn.h>
 #include <string.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#define countof(a) (sizeof(a) / sizeof(*(a)))
 
-#define OWL_MAX_SIZE ((size_t)((1ul << 48) - 1))
+#define FDS_NO_INLINE __attribute__((noinline))
 
-#define array_sizeof(a) (sizeof(a) / sizeof((a)[0]))
-
-#define ATTR_NO_INLINE __attribute__((noinline))
-
-noreturn void die(const char *format, ...);
-
-bool str_starts_with(const char *s, const char *pattern);
+noreturn
+void die(const char *format, ...);
 
 // Overload type notation:
 // I - i32
@@ -36,9 +29,5 @@ bool str_starts_with(const char *s, const char *pattern);
 // P - pointer
 // F32 - f32
 // F64 - f64
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif
