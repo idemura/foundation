@@ -7,7 +7,8 @@
 
 static const size_t FDS_DEFAULT_POOL = 0;
 
-inline static size_t fds_pad_long(size_t size)
+inline static size_t
+fds_pad_long(size_t size)
 {
     return (size + sizeof(long) - 1) & ~(sizeof(long) - 1);
 }

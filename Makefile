@@ -31,9 +31,12 @@ FDS_OBJ := $(patsubst $(FDS_DIR)/%.c,$(BUILD_DIR)/fds_%.o,$(FDS_SRC))
 FDS_TEST_OBJ := $(patsubst $(FDS_DIR)/%.c,$(BUILD_DIR)/fdstest_%.o,$(FDS_TEST_SRC))
 
 # Phony targets
-.PHONY: all clean
+.PHONY: all build_all test clean
 
-all: $(LIB_PORT) $(LIB_TEST) $(LIB_FDS) $(FDS_TEST_BIN)
+test: build_all
+	./build/fds_tests
+
+build_all: $(LIB_PORT) $(LIB_TEST) $(LIB_FDS) $(FDS_TEST_BIN)
 
 # Compile object files
 $(BUILD_DIR)/port_%.o: $(PORT_DIR)/%.c | $(BUILD_DIR)

@@ -5,13 +5,14 @@
 
 /// Dynamically allocated immutable string
 
-typedef struct {
+typedef struct
+{
     size_t len;
     char const *str;
 } string_t;
 
-inline static
-void string_empty(string_t *s)
+inline static void
+string_empty(string_t *s)
 {
     s->len = 0;
     s->str = nullptr;
